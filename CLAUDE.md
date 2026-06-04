@@ -93,7 +93,7 @@ These commands **fail on this machine** — use the alternatives instead:
 | --- | --- | --- |
 | `bundle exec jekyll serve` | `/c/Ruby32-x64/bin/bundle exec jekyll serve --no-watch` | System `bundle` shim is broken |
 | `python3 -c "..."` | `node -e "..."` | Python is not installed |
-| `gh pr edit --body "..."` | `gh api repos/madeelarshad/madeelarshad.github.io/pulls/{N} -X PATCH -f body="..."` | `gh pr edit` fails with GitHub Projects (classic) deprecation GraphQL error |
+| `gh pr edit --body "..."` | `gh api repos/adeelarshad414/madeelarshad.github.io/pulls/{N} -X PATCH -f body="..."` | `gh pr edit` fails with GitHub Projects (classic) deprecation GraphQL error |
 
 ## Design Context
 

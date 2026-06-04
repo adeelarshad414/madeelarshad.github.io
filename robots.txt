@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://madeelarshad.github.io/sitemap.xml
+Sitemap: https://adeelarshad414.github.io/madeelarshad.github.io/sitemap.xml

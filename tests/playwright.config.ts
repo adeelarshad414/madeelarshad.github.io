@@ -5,7 +5,7 @@ import { defineConfig, devices } from '@playwright/test';
  * Site: madeelarshad.github.io
  *
  * Targets a local Jekyll server by default.
- * For production testing: BASE_URL=https://madeelarshad.github.io npx playwright test
+ * For production testing: BASE_URL=https://adeelarshad414.github.io/madeelarshad.github.io npx playwright test
  * Run only SEO:      npx playwright test seo.spec.ts
  * Run only Audience: npx playwright test audience.spec.ts
  */

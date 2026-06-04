@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const SITE_URL = process.env.SITE_URL ?? 'https://madeelarshad.github.io';
+const SITE_URL = process.env.SITE_URL ?? 'https://adeelarshad414.github.io/madeelarshad.github.io';
 
 const PAGES = [
   '/',
@@ -37,7 +37,7 @@ test.describe('SEO smoke checks', () => {
     expect(person.name).toBe('Adeel Arshad');
     expect(person.jobTitle).toContain('Cloud Solution Architect');
     expect(person.sameAs).toContain('https://www.linkedin.com/in/yourprofile');
-    expect(person.sameAs).toContain('https://github.com/madeelarshad');
+    expect(person.sameAs).toContain('https://github.com/adeelarshad414');
   });
 
   test('robots.txt references the configured sitemap', async ({ request }) => {
