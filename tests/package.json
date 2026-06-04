@@ -1,0 +1,27 @@
+{
+  "name": "madeelarshad.github.io-tests",
+  "version": "1.0.0",
+  "description": "Playwright regression tests for madeelarshad.github.io (SEO + Audience Infrastructure)",
+  "private": true,
+  "scripts": {
+    "test": "npx playwright test --config=playwright.config.ts",
+    "test:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts",
+    "test:seo": "npx playwright test --config=playwright.config.ts seo.spec.ts",
+    "test:seo:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts seo.spec.ts",
+    "test:audience": "npx playwright test --config=playwright.config.ts audience.spec.ts",
+    "test:audience:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts audience.spec.ts",
+    "test:design": "npx playwright test --config=playwright.config.ts design.spec.ts",
+    "test:design:local": "BASE_URL=http://localhost:4000 npx playwright test --config=playwright.config.ts design.spec.ts",
+    "test:sprint1": "npx playwright test --config=playwright.config.ts --grep 'Sprint 1'",
+    "test:sprint2": "npx playwright test --config=playwright.config.ts --grep 'Sprint 2'",
+    "test:sprint3": "npx playwright test --config=playwright.config.ts --grep 'Sprint 3'",
+    "test:sprint4": "npx playwright test --config=playwright.config.ts --grep 'Sprint 4'",
+    "test:sprint5": "npx playwright test --config=playwright.config.ts --grep 'Sprint 5'",
+    "test:task": "npx playwright test --config=playwright.config.ts --grep",
+    "report": "npx playwright show-report playwright-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "typescript": "^5.4.5"
+  }
+}

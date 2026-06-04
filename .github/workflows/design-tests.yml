@@ -1,0 +1,70 @@
+name: Design Modernization Tests
+run-name: "Design Tests — ${{ github.event_name == 'pull_request' && github.event.pull_request.title || github.ref_name }}"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'assets/css/**'
+      - 'assets/js/**'
+      - '_layouts/**'
+      - '_includes/**'
+      - '*.html'
+      - '**/*.html'
+      - '404.html'
+      - 'tests/design.spec.ts'
+      - '.github/workflows/design-tests.yml'
+
+jobs:
+  design-tests:
+    name: Run Playwright Design Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: tests/package-lock.json
+
+      - name: Install dependencies
+        working-directory: tests
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: tests
+        run: npx playwright install --with-deps chromium
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+
+      - name: Build site locally
+        run: |
+          bundle exec jekyll build
+          bundle exec jekyll serve --detach --port 4000
+
+      - name: Run Design tests (local preview)
+        working-directory: tests
+        run: npm run test:design:local
+        env:
+          BASE_URL: http://localhost:4000
+
+      - name: Upload Playwright report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: playwright-report-design
+          path: tests/playwright-report/
+          retention-days: 14

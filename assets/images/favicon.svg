@@ -1,0 +1,6 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 512 512'>
+  <rect width='512' height='512' rx='96' fill='#0f172a'/>
+  <text x='50' y='310' font-family='Consolas,monospace' font-weight='700' font-size='180' fill='#818cf8'>&lt;</text>
+  <text x='140' y='300' font-family='Arial,Helvetica,sans-serif' font-weight='800' font-size='180' fill='#e2e8f0'>AA</text>
+  <text x='350' y='380' font-family='Consolas,monospace' font-weight='700' font-size='180' fill='#818cf8'>/&gt;</text>
+</svg>

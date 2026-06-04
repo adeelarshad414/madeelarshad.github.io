@@ -1,0 +1,299 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-02T14:23:45.684Z",
+  "title": "Design System: Abubakar Riaz Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "accent-indigo": {
+        "role": "primary",
+        "displayName": "Signal Indigo",
+        "canonical": "#6366f1",
+        "tonalRamp": [
+          "#1e1b4b",
+          "#312e81",
+          "#3730a3",
+          "#4338ca",
+          "#4f46e5",
+          "#6366f1",
+          "#818cf8",
+          "#c7d2fe"
+        ]
+      },
+      "accent-cyan": {
+        "role": "secondary",
+        "displayName": "Telemetry Cyan",
+        "canonical": "#22d3ee",
+        "tonalRamp": [
+          "#083344",
+          "#155e75",
+          "#0e7490",
+          "#0891b2",
+          "#06b6d4",
+          "#22d3ee",
+          "#67e8f9",
+          "#cffafe"
+        ]
+      },
+      "accent-violet": {
+        "role": "tertiary",
+        "displayName": "Orbit Violet",
+        "canonical": "#8b5cf6",
+        "tonalRamp": [
+          "#2e1065",
+          "#4c1d95",
+          "#5b21b6",
+          "#6d28d9",
+          "#7c3aed",
+          "#8b5cf6",
+          "#a78bfa",
+          "#ddd6fe"
+        ]
+      },
+      "bg-primary": {
+        "role": "neutral",
+        "displayName": "Deep Space",
+        "canonical": "#050810",
+        "tonalRamp": [
+          "#050810",
+          "#0a0f1e",
+          "#0d162d",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#94a3b8",
+          "#f1f5f9"
+        ]
+      },
+      "text-primary": {
+        "role": "neutral",
+        "displayName": "Bright Ink",
+        "canonical": "#f1f5f9",
+        "tonalRamp": [
+          "#0f172a",
+          "#1e293b",
+          "#334155",
+          "#475569",
+          "#64748b",
+          "#94a3b8",
+          "#cbd5e1",
+          "#f1f5f9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero name only — the single loudest element, capped at ~96px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section and page titles."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Card titles: roles, cert names, project names, award titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Paragraph copy and descriptions, ~65-75ch."
+      },
+      "label": {
+        "displayName": "Label (Mono)",
+        "purpose": "Telemetry: dates, eyebrows, metadata pills, the logo, the cursor. JetBrains Mono only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "card-rest",
+        "value": "0 4px 24px rgba(0,0,0,0.4)",
+        "purpose": "Quiet ambient seat for floating cards against the dark ground."
+      },
+      {
+        "name": "accent-glow",
+        "value": "0 0 40px rgba(99,102,241,0.18)",
+        "purpose": "The hover signature — an indigo bloom, not a directional drop shadow."
+      },
+      {
+        "name": "node-glow",
+        "value": "0 0 16px rgba(99,102,241,0.5)",
+        "purpose": "Tight halo on timeline dots and live markers so nodes read as emitting light."
+      },
+      {
+        "name": "primary-btn",
+        "value": "0 4px 20px rgba(99,102,241,0.35)",
+        "purpose": "Soft indigo seat under the primary button; deepens to 0 8px 30px on hover."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-default",
+        "value": "cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "Default easing for all state transitions and reveals."
+      },
+      {
+        "name": "duration-fast",
+        "value": "150ms",
+        "purpose": "Micro feedback."
+      },
+      {
+        "name": "duration-normal",
+        "value": "250ms",
+        "purpose": "Theme toggle and standard state changes."
+      },
+      {
+        "name": "transition-base",
+        "value": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+        "purpose": "The shared --transition applied to nearly all interactive elements."
+      },
+      {
+        "name": "reveal",
+        "value": "opacity 0.7s, transform 0.7s cubic-bezier(0.4,0,0.2,1)",
+        "purpose": "Scroll-in fade-and-rise for .animate-on-scroll; staggered 0.05s per grid child."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "sm",
+        "value": "480px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Gradient-spine CTA. The loudest action on a screen.",
+      "html": "<button class=\"ds-btn-primary\">View certifications</button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border: none; border-radius: 12px; font-family: Inter, system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.01em; color: #fff; cursor: pointer; background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%); box-shadow: 0 4px 20px rgba(99,102,241,0.35); transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), box-shadow 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(99,102,241,0.5); } .ds-btn-primary:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action — transparent with a brightening indigo edge.",
+      "html": "<button class=\"ds-btn-outline\">Get in touch</button>",
+      "css": ".ds-btn-outline { display: inline-flex; align-items: center; gap: 8px; padding: 14px 28px; border-radius: 12px; font-family: Inter, system-ui, sans-serif; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.01em; color: #f1f5f9; cursor: pointer; background: transparent; border: 1px solid rgba(99,102,241,0.45); transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-btn-outline:hover { background: rgba(99,102,241,0.08); border-color: #6366f1; transform: translateY(-2px); } .ds-btn-outline:focus-visible { outline: 2px solid #22d3ee; outline-offset: 2px; }"
+    },
+    {
+      "name": "Resume Button (nav)",
+      "kind": "button",
+      "refersTo": "nav-resume-btn",
+      "description": "Cyan-outlined pill in the navbar; inverts to a solid cyan fill on hover.",
+      "html": "<a class=\"ds-resume-btn\" href=\"#\"><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4\"/><polyline points=\"7 10 12 15 17 10\"/><line x1=\"12\" y1=\"15\" x2=\"12\" y2=\"3\"/></svg>Resume</a>",
+      "css": ".ds-resume-btn { display: inline-flex; align-items: center; gap: 6px; padding: 6px 14px; border-radius: 6px; font-family: Inter, system-ui, sans-serif; font-size: 0.85rem; font-weight: 600; white-space: nowrap; text-decoration: none; color: #22d3ee; border: 1.5px solid #22d3ee; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-resume-btn:hover { background: #22d3ee; color: #0a0a0f; } .ds-resume-btn:focus-visible { outline: 2px solid #818cf8; outline-offset: 2px; }"
+    },
+    {
+      "name": "Content Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Translucent navy panel over backdrop blur; flat at rest, glows on hover.",
+      "html": "<div class=\"ds-card\"><h3 class=\"ds-card-title\">Azure Solutions Architect Expert</h3><p class=\"ds-card-body\">AZ-305 — designing identity, governance, data, and compute on Azure.</p><span class=\"ds-card-date\">Mar 2025</span></div>",
+      "css": ".ds-card { background: rgba(13,22,45,0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(99,102,241,0.15); border-radius: 20px; padding: 28px 32px; box-shadow: 0 4px 24px rgba(0,0,0,0.4); transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-card:hover { border-color: rgba(99,102,241,0.45); box-shadow: 0 0 40px rgba(99,102,241,0.18); transform: translateY(-4px); } .ds-card-title { margin: 0 0 8px; font-family: Inter, system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; line-height: 1.3; color: #f1f5f9; } .ds-card-body { margin: 0 0 16px; font-family: Inter, system-ui, sans-serif; font-size: 0.9rem; line-height: 1.7; color: #94a3b8; } .ds-card-date { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #22d3ee; }"
+    },
+    {
+      "name": "Skill Tag",
+      "kind": "chip",
+      "refersTo": "skill-tag",
+      "description": "Tier-tinted monospace pill for skills (primary/indigo shown).",
+      "html": "<span class=\"ds-skill-tag\">Terraform</span>",
+      "css": ".ds-skill-tag { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; font-weight: 500; padding: 6px 14px; border-radius: 999px; background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.3); color: #818cf8; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-skill-tag:hover { transform: translateY(-1px); }"
+    },
+    {
+      "name": "Metadata Pill",
+      "kind": "chip",
+      "refersTo": "pill-meta",
+      "description": "Cyan-tinted monospace telemetry pill for dates and costs.",
+      "html": "<span class=\"ds-pill-meta\">Jan 2024 – Present</span>",
+      "css": ".ds-pill-meta { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; padding: 4px 12px; border-radius: 999px; background: rgba(34,211,238,0.08); border: 1px solid rgba(34,211,238,0.2); color: #22d3ee; white-space: nowrap; }"
+    },
+    {
+      "name": "Timeline Node",
+      "kind": "custom",
+      "refersTo": "card",
+      "description": "Signature pattern: a glowing indigo node on a fading gradient rail beside an experience card.",
+      "html": "<div class=\"ds-timeline-item\"><div class=\"ds-timeline-rail\"><span class=\"ds-timeline-dot\"></span><span class=\"ds-timeline-line\"></span></div><div class=\"ds-timeline-card\"><h3 class=\"ds-timeline-role\">Associate Cloud Architect</h3><span class=\"ds-timeline-company\">Tkxel</span></div></div>",
+      "css": ".ds-timeline-item { display: grid; grid-template-columns: 40px 1fr; gap: 24px; } .ds-timeline-rail { display: flex; flex-direction: column; align-items: center; } .ds-timeline-dot { width: 14px; height: 14px; border-radius: 50%; background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%); margin-top: 22px; box-shadow: 0 0 16px rgba(99,102,241,0.5); } .ds-timeline-line { flex: 1; width: 2px; margin-top: 8px; min-height: 48px; background: linear-gradient(to bottom, #6366f1, transparent); } .ds-timeline-card { background: rgba(13,22,45,0.75); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(99,102,241,0.15); border-radius: 20px; padding: 28px 32px; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-timeline-card:hover { border-color: rgba(99,102,241,0.45); box-shadow: 0 0 40px rgba(99,102,241,0.18); transform: translateX(4px); } .ds-timeline-role { margin: 0; font-family: Inter, system-ui, sans-serif; font-size: 1.05rem; font-weight: 700; color: #f1f5f9; } .ds-timeline-company { display: block; margin-top: 3px; font-size: 0.875rem; color: #475569; }"
+    },
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "card",
+      "description": "Muted link that brightens and grows a gradient underline on hover/active.",
+      "html": "<a class=\"ds-nav-link\" href=\"#\">Experience</a>",
+      "css": ".ds-nav-link { position: relative; font-family: Inter, system-ui, sans-serif; font-size: 0.9rem; font-weight: 500; color: #94a3b8; text-decoration: none; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); } .ds-nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; border-radius: 2px; background: linear-gradient(135deg, #6366f1 0%, #22d3ee 100%); transition: width 0.3s ease; } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: #f1f5f9; outline: none; } .ds-nav-link:hover::after, .ds-nav-link:focus-visible::after { width: 100%; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Control Plane",
+    "overview": "This portfolio renders a cloud architect's craft as the thing a cloud architect actually builds: a dark, instrument-grade control plane. The surface is near-black deep space lit from within by indigo-to-cyan gradients, drifting blurred orbs, and a faint engineering grid. The personality is bold, precise, and distinctive — an engineer's confidence as visual conviction. Color is committed, not hedged; depth comes from light, blur, and translucency rather than hard shadows. It rejects the generic resume template, the corporate/sterile Fluent-default look, and the trendy AI-startup clone. Responsive behavior is composition, not just reflow: desktop runs the full eleven-section sequence, while the phone surface is curated into a tighter story (identity, proof, how I work, stack, track record, credentials, recognition, then the Engage and Newsletter call-to-action) because mobile visits are short and one-handed.",
+    "keyCharacteristics": [
+      "Dark by default (near-black deep-space canvas); a full light theme exists as an opt-in override.",
+      "A committed indigo to cyan gradient as the system's signature, with violet as a third voice.",
+      "Monospace (JetBrains Mono) reserved for telemetry: dates, eyebrows, metadata, the logo, the cursor.",
+      "Depth via blur, glow, and translucency — never via heavy drop shadows or borders.",
+      "Glow-on-hover and small directional nudges as the interaction signature.",
+      "Mobile is a curated story, not a scaled-down desktop: tangential sections (Projects, Education) drop away and the Engage to Newsletter CTA closes the scroll (The Mobile-Story Rule)."
+    ],
+    "rules": [
+      {
+        "name": "The Gradient-Spine Rule",
+        "body": "The indigo to cyan gradient runs on a 135 degree axis everywhere it appears. Never invert the stops, re-angle it, or add a second unrelated gradient.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cyan-Is-Telemetry Rule",
+        "body": "Cyan marks live or machine data: dates, metadata pills, the cursor, the logo brackets, hover affordances. Forbidden as a large fill or as body text.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono-Is-Instrumentation Rule",
+        "body": "JetBrains Mono is reserved for telemetry-class text. Forbidden for headings, body copy, or anything sentence-length.",
+        "section": "typography"
+      },
+      {
+        "name": "The One-Family Display Rule",
+        "body": "Hierarchy comes from Inter's weight range (400-900) and scale, not from added display faces.",
+        "section": "typography"
+      },
+      {
+        "name": "The Glow-Not-Drop Rule",
+        "body": "Elevation responds to state with a colored glow bloom, not a darker or larger drop shadow. Surfaces are calm at rest.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Mobile-Story Rule",
+        "body": "On phones (<=768px) the page is curated into a narrative, not shrunk. Off-arc sections (Projects, Education) are dropped, the primary CTA (Engage, then Newsletter) is pulled to the close, and every nav target still resolves. Desktop and tablet keep the full section set in source order — the mobile recomposition is a display:none plus flex-order overlay, never a separate information architecture or a content fork.",
+        "section": "overview"
+      }
+    ],
+    "dos": [
+      "Do keep the indigo to cyan gradient on a 135 degree axis everywhere it appears.",
+      "Do reserve JetBrains Mono for telemetry-class text only.",
+      "Do build depth with glow, blur, and translucency; respond to hover with an Accent Glow bloom, not a darker drop shadow.",
+      "Do drive hierarchy from Inter's weight range (400-900) and scale, not extra type families.",
+      "Do bump body text from Muted Slate toward Bright Ink wherever it must clear 4.5:1; Faint Slate is for large or non-critical text only.",
+      "Do provide a prefers-reduced-motion fallback for every orb drift, fade-in, blink, and hover transform.",
+      "Do treat the dark theme as default and keep the light theme at full parity.",
+      "Do curate mobile into a story rather than shrinking the desktop stack: on phones (<=768px) drop off-arc sections (Projects, Education) and pull the Engage to Newsletter CTA to the close so the scroll ends on the ask (The Mobile-Story Rule). Keep desktop's full section set and source order untouched — the recomposition is a media-query overlay, not a fork."
+    ],
+    "donts": [
+      "Don't revive the dormant Azure-blue + Segoe UI + GitHub-dark token layer as the visible brand — it's migration drift and reads as the corporate/sterile Fluent-default look the brand rejects.",
+      "Don't let the page slide into a generic resume template; give every section the control-plane treatment.",
+      "Don't drift toward a trendy AI-startup clone: no cream-and-slate neutrals, no gradient-mesh-by-default hero, no tracked-uppercase eyebrow on every section.",
+      "Don't use cyan as a large fill or as body text, and never invert or re-angle the gradient spine.",
+      "Don't add hard drop shadows or borders heavier than 1px to convey elevation.",
+      "Don't introduce a serif or a second sans for headings, or use monospace for sentence-length copy.",
+      "Don't exceed the ~96px display ceiling or tighten display letter-spacing past -0.04em.",
+      "Don't treat mobile as desktop-scaled-down: never leave a nav link pointing at a section hidden on that breakpoint, and never bury the primary CTA mid-scroll on phones. If a section is off the mobile arc, drop it and its nav entry together."
+    ]
+  }
+}

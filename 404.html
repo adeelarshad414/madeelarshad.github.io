@@ -1,0 +1,121 @@
+---
+layout: default
+title: "Page Not Found"
+description: "The page you're looking for doesn't exist. Navigate back to Adeel Arshad's portfolio."
+permalink: /404.html
+---
+
+<section class="error-page">
+  <div class="container">
+    <div class="error-content">
+      <div class="error-code">
+        <span class="error-4">4</span>
+        <span class="error-0">0</span>
+        <span class="error-4">4</span>
+      </div>
+      <h1 class="error-title">Page Not Found</h1>
+      <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
+      <div class="error-actions">
+        <a href="{{ '/' | relative_url }}" class="error-btn error-btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Back to Home
+        </a>
+        <a href="{{ '/experience/' | relative_url }}" class="error-btn error-btn-secondary">Experience</a>
+        <a href="{{ '/certifications/' | relative_url }}" class="error-btn error-btn-secondary">Certifications</a>
+        <a href="{{ '/projects/' | relative_url }}" class="error-btn error-btn-secondary">Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .error-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+  }
+  .error-page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(99,102,241,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,102,241,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .error-content {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+  }
+  .error-code {
+    font-family: var(--font-mono);
+    font-size: clamp(6rem, 15vw, 10rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 16px;
+    letter-spacing: -0.04em;
+  }
+  .error-4 {
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .error-0 {
+    color: var(--text-muted);
+  }
+  .error-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+  }
+  .error-message {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 32px;
+  }
+  .error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+  }
+  .error-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  .error-btn-primary {
+    background: var(--gradient);
+    color: #fff;
+  }
+  .error-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+  }
+  .error-btn-secondary {
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+  }
+  .error-btn-secondary:hover {
+    border-color: var(--border-hover);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+  }
+</style>
