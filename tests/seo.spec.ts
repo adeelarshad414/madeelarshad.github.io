@@ -36,8 +36,17 @@ test.describe('SEO smoke checks', () => {
     expect(person).toBeTruthy();
     expect(person.name).toBe('Adeel Arshad');
     expect(person.jobTitle).toContain('Cloud Solution Architect');
-    expect(person.sameAs).toContain('https://www.linkedin.com/in/yourprofile');
+    expect(person.sameAs).toContain('https://www.linkedin.com/in/muhammmad-adeel-arshad-b2337880/');
     expect(person.sameAs).toContain('https://github.com/adeelarshad414');
+  });
+
+  test('published pages do not expose placeholder contact content', async ({ page }) => {
+    for (const path of PAGES) {
+      await page.goto(path);
+      await expect(page.locator('body')).not.toContainText('yourprofile');
+      await expect(page.locator('body')).not.toContainText('your.email');
+      await expect(page.locator('body')).not.toContainText('[YOUR FULL NAME]');
+    }
   });
 
   test('robots.txt references the configured sitemap', async ({ request }) => {

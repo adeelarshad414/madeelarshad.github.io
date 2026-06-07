@@ -157,8 +157,9 @@ document.querySelectorAll('a[href^="#"]').forEach((a) => {
 const roles = [
   'Cloud Solution Architect',
   'Head of DevOps',
+  'AI-Ready Platform Leader',
   'Kubestronaut',
-  'Multi-Cloud Platform Leader',
+  'DevSecOps Transformation Lead',
 ];
 
 const roleEl = document.getElementById('roleText');

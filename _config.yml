@@ -1,6 +1,6 @@
 title: Adeel Arshad
-tagline: "Cloud Solution Architect & Head of DevOps"
-description: "Cloud Solution Architect and Head of DevOps in Lahore, Pakistan. Kubestronaut and 15x cloud certified leader building secure multi-cloud platforms across AWS, Azure, GCP, Kubernetes, DevOps, FinOps, and DevSecOps."
+tagline: "Cloud Solution Architect, Head of DevOps & AI-Ready Platform Leader"
+description: "Cloud Solution Architect and Head of DevOps in Lahore, Pakistan. Kubestronaut and 15x cloud certified leader building secure, AI-ready multi-cloud platforms across AWS, Azure, GCP, Kubernetes, DevOps, FinOps, DevSecOps, and enterprise software delivery."
 
 url: "https://adeelarshad414.github.io"
 baseurl: "/madeelarshad.github.io"
@@ -8,12 +8,12 @@ baseurl: "/madeelarshad.github.io"
 author:
   name: Adeel Arshad
   github: adeelarshad414
-  linkedin: yourprofile
+  linkedin: muhammmad-adeel-arshad-b2337880
 
 social:
   name: Adeel Arshad
   links:
-    - https://www.linkedin.com/in/yourprofile
+    - https://www.linkedin.com/in/muhammmad-adeel-arshad-b2337880/
     - https://github.com/adeelarshad414
 
 logo: /assets/images/og-default.png

@@ -17,6 +17,9 @@ test.describe('Design smoke checks', () => {
   }
 
   test('theme toggle is present and usable', async ({ page }) => {
+    await page.addInitScript(() => {
+      window.localStorage.setItem('theme', 'dark');
+    });
     await page.goto('/');
     const toggle = page.locator('#themeToggle');
     await expect(toggle).toBeVisible();

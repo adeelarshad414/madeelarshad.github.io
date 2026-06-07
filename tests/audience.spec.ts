@@ -7,7 +7,9 @@ test.describe('Audience smoke checks', () => {
     await expect(page.getByRole('heading', { name: /Adeel\s+Arshad/i })).toBeVisible();
     await expect(page.getByText(/Cloud Solution Architect/i).first()).toBeVisible();
     await expect(page.locator('a[href="/assets/resume.pdf"], a[href$="/assets/resume.pdf"]').first()).toBeVisible();
-    await expect(page.locator('a[href="https://www.linkedin.com/in/yourprofile"]').first()).toBeVisible();
+    await expect(page.locator('a[href="https://www.linkedin.com/in/muhammmad-adeel-arshad-b2337880/"]').first()).toBeVisible();
+    await expect(page.getByText(/AI-ready platforms/i).first()).toBeVisible();
+    await expect(page.getByText(/Production readiness/i).first()).toBeVisible();
   });
 
   test('key detail pages are reachable from the navigation surface', async ({ page }) => {
