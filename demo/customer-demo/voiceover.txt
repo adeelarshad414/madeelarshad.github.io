@@ -1,0 +1,13 @@
+Meet Adeel Arshad, a Cloud Solution Architect and Head of DevOps who helps organizations turn ambitious digital goals into secure, automated, AI ready platforms.
+
+This portfolio presents his leadership across AWS, Azure, Google Cloud, Kubernetes, DevOps, FinOps, DevSecOps, and quality focused delivery.
+
+Adeel brings more than ten years of experience and has built and led a thirty member DevOps department, guiding cloud engineers, SREs, and delivery teams across enterprise programs.
+
+For customers, the value is practical: clear architecture, infrastructure as code, resilient CI/CD, GitOps, observability, security controls, and measurable improvements in release speed, reliability, and cost.
+
+His credentials include fifteen active certifications across AWS, Microsoft Azure, Google Cloud, CNCF, and Kubernetes, including Kubestronaut and professional level cloud architecture credentials.
+
+The site also highlights impact programs such as multi-cloud architecture, Kubernetes modernization, CI/CD transformation, FinOps optimization, and DevOps organization buildout.
+
+If your team is planning cloud strategy, platform modernization, AI readiness, or DevOps transformation, connect with Adeel through LinkedIn or download the resume directly from the portfolio.
